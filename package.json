@@ -17,6 +17,11 @@
       "pre-commit": "lint-staged"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GuTsaV/ehrenb.org"
+  },
+  "license": "UNLICENSED",
   "devDependencies": {
     "@nuxtjs/eslint-config": "^4.0.0",
     "@nuxtjs/eslint-module": "^3.0.0",
