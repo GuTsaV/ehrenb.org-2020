@@ -1,0 +1,67 @@
+body {
+  font-weight: 400;
+  font-size: rem(16px);
+  font-display: optional;
+  color: $nearly-black;
+  line-height: 1.2;
+  font-family: 'Open Sans', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Typography */
+
+.sup {
+  position: relative;
+  bottom: 1ex;
+  font-size: 80%;
+}
+
+
+/* Headings */
+
+h1 {
+  font-weight: 300;
+  line-height: 1;
+  font-size: 26pt;
+}
+
+h2 {
+  font-size: 22pt;
+}
+
+h3 {
+  font-size: 14pt;
+}
+
+h4 {
+  font-size: 12pt;
+}
+
+
+/* Paragraphs */
+
+p {
+  font-family: Arial, sans-serif;
+  color: $nearly-black;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+
+strong {
+  font-weight: 800;
+}
+
+a {
+  font-family: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: $middle-grey;
+}
