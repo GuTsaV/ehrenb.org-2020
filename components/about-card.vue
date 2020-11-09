@@ -1,17 +1,18 @@
 <template>
   <article class="card">
-    <h1>{{ post.title }}</h1>
+    <h1>{{ title }}</h1>
     <!-- eslint-disable vue/no-v-html -->
-    <div class="post-body" v-html="post.body"></div>
+    <div class="post-body" v-html="body"></div>
     <!--eslint-enable-->
   </article>
 </template>
 
 <script>
 export default {
-  name: 'Card',
+  name: 'AboutCard',
   props: {
-    post: { type: Object, required: true },
+    title: { type: String, required: true },
+    body: { type: String, default: '' },
   },
 };
 </script>

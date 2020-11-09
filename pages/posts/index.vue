@@ -1,6 +1,8 @@
 <template>
   <div class="card-holder">
     <card v-for="post in posts" :key="post.uid" :post="post"></card>
+    <empty-card></empty-card>
+    <empty-card></empty-card>
   </div>
 </template>
 
@@ -13,6 +15,11 @@ export default {
 
     return {
       posts,
+    };
+  },
+  head() {
+    return {
+      title: 'Post listing',
     };
   },
 };

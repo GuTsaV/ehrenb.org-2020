@@ -13,15 +13,11 @@ export const getStartpage = async context => {
   );
 
   const startpage = {
-    firstCard: {
-      title: RichText.asText(startpageData.data.title),
-      subtitle: RichText.asText(startpageData.data.subtitle),
-      image: startpageData.data.startpage_image.url,
-    },
-    aboutCard: {
-      title: RichText.asText(startpageData.data.second_card_heading),
-      body: RichText.asHtml(startpageData.data.second_card_body),
-    },
+    title: RichText.asText(startpageData.data.title),
+    subtitle: RichText.asText(startpageData.data.subtitle),
+    image: startpageData.data.startpage_image.url,
+    aboutTitle: RichText.asText(startpageData.data.second_card_heading),
+    aboutBody: RichText.asHtml(startpageData.data.second_card_body),
   };
 
   const posts = postsData.results.map(post => ({

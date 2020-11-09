@@ -1,7 +1,14 @@
 <template>
   <div class="card-holder">
-    <first-card :post="startpage.firstCard"></first-card>
-    <about-card :post="startpage.aboutCard"></about-card>
+    <first-card
+      :title="startpage.title"
+      :subtitle="startpage.subtitle"
+      :image="startpage.image"
+    ></first-card>
+    <about-card
+      :title="startpage.aboutTitle"
+      :body="startpage.aboutBody"
+    ></about-card>
     <contact-card></contact-card>
     <card v-for="post in posts" :key="post.uid" :post="post"></card>
     <empty-card></empty-card>
@@ -24,12 +31,6 @@ export default {
   head() {
     return {
       title: 'Home',
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://ehrenb.org',
-        },
-      ],
       meta: [
         {
           hid: 'description',
@@ -45,12 +46,17 @@ export default {
         {
           property: 'og:image',
           hid: 'og:image',
-          content: '',
+          content: this.startpage.image,
         },
         {
           property: 'og:url',
           hid: 'og:url',
           content: 'https://ehrenb.org',
+        },
+        {
+          property: 'og:type',
+          hid: 'og:url',
+          content: 'website',
         },
       ],
     };

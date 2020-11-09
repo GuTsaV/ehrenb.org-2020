@@ -4,9 +4,12 @@
   width: 100%;
 }
 
-.card-holder {
+.content {
   max-width: 95rem;
   margin: 0 auto;
+}
+
+.card-holder {
   display: flex;
   flex-wrap: wrap;
 }
@@ -31,26 +34,4 @@ img {
 
 .post-body {
   margin: 1rem 0 0 0;
-}
-
-
-/* Contact card */
-
-.contact-list {
-  margin-top: 1.5rem;
-  list-style-type: none;
-}
-
-.contact-list li {
-  margin: 1rem 0 1rem 1rem;
-  font-size: 16pt;
-}
-
-.contact-list a {
-  margin: 0 0 0 0.5rem;
-}
-
-.contact-list li img {
-  width: 1.2rem;
-  display: inline;
 }

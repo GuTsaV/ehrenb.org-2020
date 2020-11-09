@@ -1,9 +1,9 @@
 <template>
   <article class="card">
-    <div>
-      <h1>{{ post.title }}</h1>
-      <h2 v-if="post.subtitle">{{ post.subtitle }}</h2>
-      <img v-if="post.image" :src="post.image" />
+    <h1>{{ title }}</h1>
+    <h2>{{ subtitle }}</h2>
+    <div class="image-box">
+      <img :src="image" />
     </div>
   </article>
 </template>
@@ -12,7 +12,22 @@
 export default {
   name: 'FirstCard',
   props: {
-    post: { type: Object, required: true },
+    title: { type: String, required: true },
+    subtitle: { type: String, required: true },
+    image: { type: String, required: true },
   },
 };
 </script>
+
+<style lang="scss" scoped>
+h2 {
+  margin-top: 0.4rem;
+}
+
+.image-box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+</style>

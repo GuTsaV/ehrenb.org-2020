@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper">
-    <Nuxt />
+    <div class="content">
+      <top-header v-if="$route.name !== 'index'"></top-header>
+      <Nuxt />
+    </div>
   </div>
 </template>
 
@@ -16,7 +19,6 @@ export default {
         url: 'https://ehrenb.org',
         sameAs: [
           'https://www.linkedin.com/in/gutsav',
-          'https://plus.google.com/+GustavEhrenborg',
           'https://www.facebook.com/gutsav',
           'https://github.com/GuTsaV',
           'https://www.instagram.com/gutsav/',
