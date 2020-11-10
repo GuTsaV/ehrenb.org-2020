@@ -33,7 +33,7 @@ export default {
       pageType: post.pageType,
       pagetitle: post.title,
       title: post.title,
-      image: post.image,
+      image: post.image.url,
       description: post.preamble,
       createdAt: post.createdAt,
       modifiedAt: post.createdAt,

@@ -3,10 +3,7 @@
     <h1>{{ title }}</h1>
     <h2>{{ subtitle }}</h2>
     <div class="image-box">
-      <img
-        :src="`${image.url}?auto=compress,format&fit=crop&w=720&h=720`"
-        :alt="image.alt"
-      />
+      <img :src="`${image.url}&fit=crop&w=720&h=720`" :alt="image.alt" />
     </div>
   </article>
 </template>

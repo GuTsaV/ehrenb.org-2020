@@ -29,7 +29,7 @@ export default {
       pageType: 'home',
       pagetitle: 'Home',
       title: startpage.title,
-      image: startpage.image,
+      image: startpage.image.url,
       description: startpage.description,
     };
 

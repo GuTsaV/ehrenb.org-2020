@@ -2,10 +2,7 @@
   <div class="image-holder">
     <figure>
       <div class="image-border">
-        <img
-          :src="`${image.url}?auto=compress,format&fit=crop&w=900&h=600`"
-          :alt="image.alt"
-        />
+        <img :src="`${image.url}&fit=crop&w=900&h=600`" :alt="image.alt" />
       </div>
       <figcaption v-if="caption">{{ caption }}</figcaption>
     </figure>
