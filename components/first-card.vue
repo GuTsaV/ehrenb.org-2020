@@ -3,7 +3,10 @@
     <h1>{{ title }}</h1>
     <h2>{{ subtitle }}</h2>
     <div class="image-box">
-      <img :src="image" />
+      <img
+        :src="`${image.url}?auto=compress,format&fit=crop&w=250&h=250`"
+        :alt="image.alt"
+      />
     </div>
   </article>
 </template>
@@ -14,7 +17,7 @@ export default {
   props: {
     title: { type: String, required: true },
     subtitle: { type: String, required: true },
-    image: { type: String, required: true },
+    image: { type: Object, required: true },
   },
 };
 </script>

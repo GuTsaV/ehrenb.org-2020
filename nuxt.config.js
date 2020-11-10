@@ -41,4 +41,9 @@ export default {
   privateRuntimeConfig: {
     prismicToken: process.env.PRISMIC_TOKEN,
   },
+  vue: {
+    config: {
+      productionTip: false,
+    },
+  },
 };

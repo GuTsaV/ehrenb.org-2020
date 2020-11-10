@@ -9,7 +9,7 @@
         <span>{{ date }}</span>
       </div>
 
-      <framed-image :image-url="post.image"></framed-image>
+      <framed-image :image="post.image"></framed-image>
 
       <!-- eslint-disable vue/no-v-html -->
       <div class="post-body" v-html="post.body"></div>
@@ -30,7 +30,7 @@ export default {
     const date = post.createdAt.toLocaleString('en-uk', options);
 
     const metadata = {
-      pageType: 'post',
+      pageType: post.pageType,
       pagetitle: post.title,
       title: post.title,
       image: post.image,
@@ -60,6 +60,12 @@ export default {
 
 .post-holder article {
   padding: 2rem 6rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-holder article {
+    padding: 1rem;
+  }
 }
 
 article {

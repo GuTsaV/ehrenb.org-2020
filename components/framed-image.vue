@@ -2,7 +2,10 @@
   <div class="image-holder">
     <figure>
       <div class="image-border">
-        <img :src="`${imageUrl}?auto=compress,format&fit=crop&w=900&h=600`" />
+        <img
+          :src="`${image.url}?auto=compress,format&fit=crop&w=900&h=600`"
+          :alt="image.alt"
+        />
       </div>
       <figcaption v-if="caption">{{ caption }}</figcaption>
     </figure>
@@ -13,7 +16,7 @@
 export default {
   name: 'FramedImage',
   props: {
-    imageUrl: { type: String, required: true },
+    image: { type: Object, required: true },
     caption: { type: String, default: null },
   },
 };

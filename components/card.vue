@@ -4,7 +4,8 @@
       <h1>{{ post.title }}</h1>
       <img
         v-if="post.image"
-        :src="`${post.image}?auto=compress,format&fit=crop&w=400&h=100`"
+        :src="`${post.image.url}?auto=compress,format&fit=crop&w=400&h=100`"
+        :alt="post.image.alt"
       />
     </nuxt-link>
     <!-- eslint-disable vue/no-v-html -->
