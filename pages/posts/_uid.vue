@@ -1,44 +1,52 @@
 <template>
   <div class="post-holder">
-    <div class="single-post">
+    <article>
       <div class="post-header">
         <div>
           <h1>{{ post.title }}</h1>
           <h2>{{ post.subtitle }}</h2>
         </div>
-        <span>{{ post.createdAt }}</span>
+        <span>{{ date }}</span>
       </div>
 
-      <img v-if="post.image" :src="post.image" />
+      <framed-image :image-url="post.image"></framed-image>
+
       <!-- eslint-disable vue/no-v-html -->
       <div class="post-body" v-html="post.body"></div>
       <!--eslint-enable-->
-    </div>
+    </article>
   </div>
 </template>
 
 <script>
+import metaMapper from '@/helpers/meta-mapper';
+
 export default {
   async asyncData(context) {
     const { getPost } = await import('@/queries/get-post');
-
     const { post } = await getPost(context);
+
+    const options = { weekday: 'long', month: 'long', day: 'numeric' };
+    const date = post.createdAt.toLocaleString('en-uk', options);
+
+    const metadata = {
+      pageType: 'post',
+      pagetitle: post.title,
+      title: post.title,
+      image: post.image,
+      description: post.preamble,
+      createdAt: post.createdAt,
+      modifiedAt: post.createdAt,
+    };
 
     return {
       post,
+      date,
+      metadata,
     };
   },
   head() {
-    return {
-      title: this.post.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.post.subtitle,
-        },
-      ],
-    };
+    return metaMapper(this.metadata, this.$router.currentRoute.path);
   },
 };
 </script>
@@ -50,12 +58,11 @@ export default {
   align-items: center;
 }
 
-.post-holder {
-  max-width: 95rem;
-  margin: 0 auto;
+.post-holder article {
+  padding: 2rem 6rem;
 }
 
-.single-post {
+article {
   border: 1px solid $middle-grey;
   box-sizing: border-box;
   padding: 1rem;

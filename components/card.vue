@@ -2,7 +2,10 @@
   <article class="card">
     <nuxt-link v-if="post.uid" :to="`/posts/${post.uid}`">
       <h1>{{ post.title }}</h1>
-      <img v-if="post.image" :src="post.image" />
+      <img
+        v-if="post.image"
+        :src="`${post.image}?auto=compress,format&fit=crop&w=400&h=100`"
+      />
     </nuxt-link>
     <!-- eslint-disable vue/no-v-html -->
     <div class="post-body" v-html="post.body"></div>
@@ -23,8 +26,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  margin-bottom: 1rem;
+}
+
 a {
   text-decoration: none;
+}
+
+img {
+  width: 100%;
 }
 
 .read-more {

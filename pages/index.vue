@@ -17,49 +17,30 @@
 </template>
 
 <script>
+import metaMapper from '@/helpers/meta-mapper';
+
 export default {
   async asyncData(context) {
     const { getStartpage } = await import('@/queries/get-startpage');
 
     const { startpage, posts } = await getStartpage(context);
 
+    const metadata = {
+      pageType: 'home',
+      pagetitle: 'Home',
+      title: startpage.title,
+      image: startpage.image,
+      description: startpage.description,
+    };
+
     return {
       startpage,
       posts,
+      metadata,
     };
   },
   head() {
-    return {
-      title: 'Home',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Gustav Ehrenborg - fullstack developer with a passion for shoes and cooking',
-        },
-        {
-          property: 'og:title',
-          hid: 'og:title',
-          content: 'Gustav Ehrenborg',
-        },
-        {
-          property: 'og:image',
-          hid: 'og:image',
-          content: this.startpage.image,
-        },
-        {
-          property: 'og:url',
-          hid: 'og:url',
-          content: 'https://ehrenb.org',
-        },
-        {
-          property: 'og:type',
-          hid: 'og:url',
-          content: 'website',
-        },
-      ],
-    };
+    return metaMapper(this.metadata, this.$router.currentRoute.path);
   },
 };
 </script>

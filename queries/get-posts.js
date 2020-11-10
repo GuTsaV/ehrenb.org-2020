@@ -13,6 +13,7 @@ export const getPosts = async context => {
   const posts = postsData.results.map(post => ({
     uid: post.uid,
     title: RichText.asText(post.data.title),
+    image: post.data.image.url,
     body: post.data.preamble,
   }));
 

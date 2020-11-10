@@ -15,6 +15,7 @@ export const getStartpage = async context => {
   const startpage = {
     title: RichText.asText(startpageData.data.title),
     subtitle: RichText.asText(startpageData.data.subtitle),
+    description: startpageData.data.description,
     image: startpageData.data.startpage_image.url,
     aboutTitle: RichText.asText(startpageData.data.second_card_heading),
     aboutBody: RichText.asHtml(startpageData.data.second_card_body),
@@ -23,6 +24,7 @@ export const getStartpage = async context => {
   const posts = postsData.results.map(post => ({
     uid: post.uid,
     title: RichText.asText(post.data.title),
+    image: post.data.image.url,
     body: post.data.preamble,
   }));
 

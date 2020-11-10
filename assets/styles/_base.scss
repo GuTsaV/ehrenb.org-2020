@@ -5,7 +5,7 @@
 }
 
 .content {
-  max-width: 95rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -25,11 +25,7 @@
   margin: 0.3rem;
   max-width: 100%;
   padding: 1.5rem;
-}
-
-img {
-  max-height: 250px;
-  max-width: 100%;
+  overflow: hidden;
 }
 
 .post-body {

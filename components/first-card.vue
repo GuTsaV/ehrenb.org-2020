@@ -30,4 +30,8 @@ h2 {
   justify-content: center;
   width: 100%;
 }
+
+img {
+  max-width: 15rem;
+}
 </style>
