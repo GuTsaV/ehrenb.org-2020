@@ -18,23 +18,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.image-holder {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-figure {
-  max-width: 45rem;
-  text-align: center;
-}
-
-.image-border {
-  border: 1px solid $middle-grey;
-  padding: 0.3rem;
-}
-</style>

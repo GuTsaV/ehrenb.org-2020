@@ -59,10 +59,10 @@ export default {
 }
 
 .post-holder article {
-  padding: 2rem 6rem;
+  padding: 2rem 12rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .post-holder article {
     padding: 1rem;
   }
