@@ -5,7 +5,7 @@
       <ul class="contact-list">
         <li>
           <img src="/envelope.svg" alt="Email symbol" /><a
-            href="https://www.linkedin.com/in/gutsav/"
+            :href="`mailto:${email}`"
             >{{ email }}</a
           >
         </li>

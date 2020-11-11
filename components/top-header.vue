@@ -7,15 +7,20 @@
       </div>
     </nuxt-link>
     <div class="logo-box">
-      <a href="https://www.linkedin.com/in/gutsav/"
-        ><img src="/linkedin.svg" alt="LinkedIn logo"
-      /></a>
-      <a href="https://github.com/GuTsaV"
-        ><img src="/github.svg" alt="GitHub logo"
-      /></a>
-      <a href="https://www.instagram.com/GuTsaV/"
-        ><img src="/instagram.svg" alt="Instagram logo"
-      /></a>
+      <li>
+        <a :href="`mailto:${email}`">
+          <img src="/envelope.svg" alt="Email symbol"
+        /></a>
+        <a href="https://www.linkedin.com/in/gutsav/"
+          ><img src="/linkedin.svg" alt="LinkedIn logo"
+        /></a>
+        <a href="https://github.com/GuTsaV"
+          ><img src="/github.svg" alt="GitHub logo"
+        /></a>
+        <a href="https://www.instagram.com/GuTsaV/"
+          ><img src="/instagram.svg" alt="Instagram logo"
+        /></a>
+      </li>
     </div>
   </header>
 </template>
@@ -23,6 +28,14 @@
 <script>
 export default {
   name: 'TopHeader',
+  data: () => {
+    return {
+      email: 'gro.bnerhe@ih'
+        .split('')
+        .reverse()
+        .join(''),
+    };
+  },
 };
 </script>
 
