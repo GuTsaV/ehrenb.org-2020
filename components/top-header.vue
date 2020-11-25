@@ -7,20 +7,18 @@
       </div>
     </nuxt-link>
     <div class="logo-box">
-      <li>
-        <a :href="`mailto:${email}`">
-          <img src="/envelope.svg" alt="Email symbol"
-        /></a>
-        <a href="https://www.linkedin.com/in/gutsav/"
-          ><img src="/linkedin.svg" alt="LinkedIn logo"
-        /></a>
-        <a href="https://github.com/GuTsaV"
-          ><img src="/github.svg" alt="GitHub logo"
-        /></a>
-        <a href="https://www.instagram.com/GuTsaV/"
-          ><img src="/instagram.svg" alt="Instagram logo"
-        /></a>
-      </li>
+      <a :href="`mailto:${email}`">
+        <img src="/envelope.svg" alt="Email symbol"
+      /></a>
+      <a href="https://www.linkedin.com/in/gutsav/"
+        ><img src="/linkedin.svg" alt="LinkedIn logo"
+      /></a>
+      <a href="https://github.com/GuTsaV"
+        ><img src="/github.svg" alt="GitHub logo"
+      /></a>
+      <a href="https://www.instagram.com/GuTsaV/"
+        ><img src="/instagram.svg" alt="Instagram logo"
+      /></a>
     </div>
   </header>
 </template>

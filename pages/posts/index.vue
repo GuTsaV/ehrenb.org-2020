@@ -9,8 +9,9 @@
 <script>
 export default {
   async asyncData(context) {
-    const { getPosts } = await import('@/queries/get-posts');
-
+    const { getPosts } = await import(
+      /* webpackChunkName: "queries-get-posts" */ '@/queries/get-posts'
+    );
     const { posts } = await getPosts(context);
 
     return {

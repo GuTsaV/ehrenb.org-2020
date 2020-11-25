@@ -21,8 +21,9 @@ import metaMapper from '@/helpers/meta-mapper';
 
 export default {
   async asyncData(context) {
-    const { getStartpage } = await import('@/queries/get-startpage');
-
+    const { getStartpage } = await import(
+      /* webpackChunkName: "queries-get-startpage" */ '@/queries/get-startpage'
+    );
     const { startpage, posts } = await getStartpage(context);
 
     const metadata = {

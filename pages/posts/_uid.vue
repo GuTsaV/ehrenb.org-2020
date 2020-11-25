@@ -25,7 +25,9 @@ import SyntaxHighlighterMixin from '@/assets/mixins/syntax-highlighter-mixin';
 export default {
   mixins: [SyntaxHighlighterMixin],
   async asyncData(context) {
-    const { getPost } = await import('@/queries/get-post');
+    const { getPost } = await import(
+      /* webpackChunkName: "queries-get-post" */ '@/queries/get-post'
+    );
     const { post } = await getPost(context);
 
     const options = { weekday: 'long', month: 'long', day: 'numeric' };
