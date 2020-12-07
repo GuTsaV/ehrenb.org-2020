@@ -30,7 +30,12 @@ export default {
     );
     const { post } = await getPost(context);
 
-    const options = { weekday: 'long', month: 'long', day: 'numeric' };
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    };
     const date = post.createdAt.toLocaleString('en-uk', options);
 
     const metadata = {

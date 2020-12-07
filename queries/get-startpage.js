@@ -9,7 +9,7 @@ export const getStartpage = async context => {
 
   const postsData = await api.query(
     Prismic.Predicates.at('document.type', 'post'),
-    { orderings: '[my.post.publication_date desc]', pageSize: 100 },
+    { orderings: '[document.first_publication_date desc]', pageSize: 100 },
   );
 
   const startpage = {

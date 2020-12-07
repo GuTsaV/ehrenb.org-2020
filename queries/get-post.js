@@ -13,7 +13,7 @@ export const getPost = async context => {
     image: postData.data.image,
     preamble: postData.data.preamble,
     body: RichText.asHtml(postData.data.content, null, htmlSerializer),
-    createdAt: new Date(postData.first_publication_date),
+    createdAt: new Date(postData.data.publish_date),
     pageType: postData.type,
   };
 
