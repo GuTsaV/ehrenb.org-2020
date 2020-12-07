@@ -20,10 +20,8 @@
 
 <script>
 import metaMapper from '@/helpers/meta-mapper';
-import SyntaxHighlighterMixin from '@/assets/mixins/syntax-highlighter-mixin';
 
 export default {
-  mixins: [SyntaxHighlighterMixin],
   async asyncData(context) {
     const { getPost } = await import(
       /* webpackChunkName: "queries-get-post" */ '@/queries/get-post'

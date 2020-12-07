@@ -1,3 +1,4 @@
+import hljs from 'highlight.js';
 import prismicDOM from 'prismic-dom';
 const Elements = prismicDOM.RichText.Elements;
 
@@ -12,6 +13,10 @@ export default (type, element) => {
       </figure>
     </div>
     `;
+  }
+
+  if (type === Elements.preformatted) {
+    return `<pre class="hljs">${hljs.highlightAuto(element.text).value}</pre>`;
   }
 
   return null;
