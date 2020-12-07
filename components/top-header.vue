@@ -2,8 +2,10 @@
   <header>
     <nuxt-link :to="'/'">
       <div class="title-box">
-        <h1>Gustav Ehrenborg</h1>
-        <h2>fullstack developer</h2>
+        <h1>
+          Gustav Ehrenborg
+          <small>fullstack developer</small>
+        </h1>
       </div>
     </nuxt-link>
     <div class="logo-box">

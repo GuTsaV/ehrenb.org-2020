@@ -1,7 +1,7 @@
 <template>
   <article class="card">
     <nuxt-link v-if="post.uid" :to="`/posts/${post.uid}`">
-      <h1>{{ post.title }}</h1>
+      <h2>{{ post.title }}</h2>
       <img
         v-if="post.image"
         :src="`${post.image.url}&fit=crop&w=400&h=100`"
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 {
+h2 {
   margin-bottom: 1rem;
 }
 

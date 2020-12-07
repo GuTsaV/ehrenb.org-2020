@@ -3,8 +3,10 @@
     <article>
       <div class="post-header">
         <div>
-          <h1>{{ post.title }}</h1>
-          <h2>{{ post.subtitle }}</h2>
+          <h2>
+            {{ post.title }}
+            <small>{{ post.subtitle }}</small>
+          </h2>
         </div>
         <span>{{ date }}</span>
       </div>

@@ -1,7 +1,9 @@
 <template>
   <article class="card">
-    <h1>{{ title }}</h1>
-    <h2>{{ subtitle }}</h2>
+    <h1>
+      {{ title }}
+      <small>{{ subtitle }}</small>
+    </h1>
     <div class="image-box">
       <img :src="`${image.url}&fit=crop&w=720&h=720`" :alt="image.alt" />
     </div>
@@ -20,10 +22,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h2 {
-  margin-top: 0.4rem;
-}
-
 .image-box {
   align-items: center;
   display: flex;
