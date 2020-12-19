@@ -1,4 +1,5 @@
 # ehrenb.org
+My personal website from 2020. Built with Nuxt, Prismic CMS and hosted on Vercel. 
 
 ## Setup
 * `cp .env.sample .env`
